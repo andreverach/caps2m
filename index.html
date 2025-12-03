@@ -361,6 +361,34 @@
       </svg>
     </button>
 
+    <!-- Lightbox Modal -->
+    <div
+      id="lightbox"
+      class="fixed inset-0 z-[60] hidden bg-black/90 backdrop-blur-sm flex items-center justify-center opacity-0 transition-opacity duration-300"
+    >
+      <button
+        id="lightbox-close"
+        class="absolute top-4 right-4 text-white hover:text-gray-300 focus:outline-none p-2"
+      >
+        <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M6 18L18 6M6 6l12 12"
+          ></path>
+        </svg>
+      </button>
+      <div class="relative max-w-4xl max-h-[90vh] mx-4">
+        <img
+          id="lightbox-img"
+          src=""
+          alt="Full size"
+          class="max-h-[90vh] w-auto object-contain rounded-lg shadow-2xl"
+        />
+      </div>
+    </div>
+
     <script src="js/main.js"></script>
   </body>
 </html>

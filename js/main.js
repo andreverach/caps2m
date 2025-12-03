@@ -37,4 +37,60 @@ document.addEventListener('DOMContentLoaded', () => {
       behavior: 'smooth'
     })
   })
+
+  // Lightbox Logic
+  const lightbox = document.getElementById('lightbox')
+  const lightboxImg = document.getElementById('lightbox-img')
+  const lightboxClose = document.getElementById('lightbox-close')
+  const productImages = document.querySelectorAll('.group img') // Select all product images
+
+  if (lightbox && lightboxImg && lightboxClose) {
+    // Open Lightbox
+    productImages.forEach((img) => {
+      img.style.cursor = 'zoom-in' // Add zoom cursor
+      // Fix: Add relative and z-10 to ensure image is above the full-card link span
+      img.classList.add('relative', 'z-10')
+
+      img.addEventListener('click', (e) => {
+        //console.log('Image clicked:', img.src) // Debug log
+        e.preventDefault() // Prevent default if wrapped in link
+        e.stopPropagation() // Stop event from bubbling to the card link
+        const src = img.getAttribute('src')
+        lightboxImg.setAttribute('src', src)
+        lightbox.classList.remove('hidden')
+        // Small delay to allow display:block to apply before opacity transition
+        setTimeout(() => {
+          lightbox.classList.remove('opacity-0')
+        }, 10)
+        document.body.style.overflow = 'hidden' // Prevent scrolling
+      })
+    })
+
+    // Close Lightbox Function
+    const closeLightbox = () => {
+      lightbox.classList.add('opacity-0')
+      setTimeout(() => {
+        lightbox.classList.add('hidden')
+        lightboxImg.setAttribute('src', '')
+      }, 300) // Match transition duration
+      document.body.style.overflow = '' // Restore scrolling
+    }
+
+    // Close on Button Click
+    lightboxClose.addEventListener('click', closeLightbox)
+
+    // Close on Background Click
+    lightbox.addEventListener('click', (e) => {
+      if (e.target === lightbox) {
+        closeLightbox()
+      }
+    })
+
+    // Close on Escape Key
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && !lightbox.classList.contains('hidden')) {
+        closeLightbox()
+      }
+    })
+  }
 })
