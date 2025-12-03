@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CAPS 2M - Inicio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ["Inter", "sans-serif"],
+            },
+            colors: {
+              black: "#000000",
+              white: "#FFFFFF",
+              gray: {
+                100: "#f3f4f6",
+                900: "#111827",
+              },
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      body {
+        font-family: "Inter", sans-serif;
+        background-color: #ffffff;
+        color: #000000;
+      }
+    </style>
+  </head>
+  <body class="bg-white text-black antialiased">
+    <!-- Sticky Navbar -->
+    <nav
+      class="fixed top-0 w-full bg-white/90 backdrop-blur-sm border-b border-gray-200 z-50 transition-all duration-300"
+      id="navbar"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-16">
+          <div class="flex-shrink-0 flex items-center">
+            <a href="index.html" class="text-2xl font-bold tracking-tighter"
+              >CAPS 2M</a
+            >
+          </div>
+          <div class="hidden sm:flex space-x-8">
+            <a
+              href="index.html"
+              class="text-black hover:text-gray-600 px-3 py-2 rounded-md text-sm font-medium transition-colors"
+              >INICIO</a
+            >
+            <a
+              href="gorras.html"
+              class="text-black hover:text-gray-600 px-3 py-2 rounded-md text-sm font-medium transition-colors"
+              >GORRAS</a
+            >
+          </div>
+          <!-- Mobile menu button -->
+          <div class="sm:hidden flex items-center">
+            <button
+              id="mobile-menu-btn"
+              class="text-black hover:text-gray-600 focus:outline-none"
+            >
+              <svg
+                class="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- Mobile Menu -->
+      <div
+        class="sm:hidden hidden bg-white border-b border-gray-200"
+        id="mobile-menu"
+      >
+        <div class="px-2 pt-2 pb-3 space-y-1">
+          <a
+            href="index.html"
+            class="block text-black hover:bg-gray-50 px-3 py-2 rounded-md text-base font-medium"
+            >INICIO</a
+          >
+          <a
+            href="gorras.html"
+            class="block text-black hover:bg-gray-50 px-3 py-2 rounded-md text-base font-medium"
+            >GORRAS</a
+          >
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="pt-24 pb-12 text-center">
+      <h1 class="text-5xl md:text-7xl font-bold tracking-tighter mb-4">
+        CAPS 2M
+      </h1>
+      <p class="text-xl text-gray-600 max-w-2xl mx-auto px-4">
+        Estilo premium. Diseño minimalista. La mejor calidad en gorras.
+      </p>
+    </div>
+
+    <!-- Gallery Section -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-24">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Product 1 -->
+        <div class="group relative">
+          <div
+            class="aspect-w-1 aspect-h-1 w-full overflow-hidden rounded-lg bg-gray-100 xl:aspect-w-7 xl:aspect-h-8"
+          >
+            <img
+              src="images/black_cap_front_1764799166954.png"
+              alt="Gorra Negra Frontal"
+              class="h-full w-full object-cover object-center group-hover:opacity-75 transition-opacity duration-300"
+            />
+          </div>
+          <div class="mt-4 flex justify-between">
+            <div>
+              <h3 class="text-sm text-gray-700">
+                <a href="#">
+                  <span aria-hidden="true" class="absolute inset-0"></span>
+                  Classic Black
+                </a>
+              </h3>
+              <p class="mt-1 text-sm text-gray-500">
+                Diseño frontal minimalista
+              </p>
+            </div>
+            <p class="text-sm font-medium text-gray-900">$25.00</p>
+          </div>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="group relative">
+          <div
+            class="aspect-w-1 aspect-h-1 w-full overflow-hidden rounded-lg bg-gray-100 xl:aspect-w-7 xl:aspect-h-8"
+          >
+            <img
+              src="images/white_cap_side_1764799180256.png"
+              alt="Gorra Blanca Lateral"
+              class="h-full w-full object-cover object-center group-hover:opacity-75 transition-opacity duration-300"
+            />
+          </div>
+          <div class="mt-4 flex justify-between">
+            <div>
+              <h3 class="text-sm text-gray-700">
+                <a href="#">
+                  <span aria-hidden="true" class="absolute inset-0"></span>
+                  Pure White
+                </a>
+              </h3>
+              <p class="mt-1 text-sm text-gray-500">Vista lateral limpia</p>
+            </div>
+            <p class="text-sm font-medium text-gray-900">$25.00</p>
+          </div>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="group relative">
+          <div
+            class="aspect-w-1 aspect-h-1 w-full overflow-hidden rounded-lg bg-gray-100 xl:aspect-w-7 xl:aspect-h-8"
+          >
+            <img
+              src="images/black_cap_perspective_1764799192312.png"
+              alt="Gorra Negra Perspectiva"
+              class="h-full w-full object-cover object-center group-hover:opacity-75 transition-opacity duration-300"
+            />
+          </div>
+          <div class="mt-4 flex justify-between">
+            <div>
+              <h3 class="text-sm text-gray-700">
+                <a href="#">
+                  <span aria-hidden="true" class="absolute inset-0"></span>
+                  Urban Black
+                </a>
+              </h3>
+              <p class="mt-1 text-sm text-gray-500">Estilo urbano moderno</p>
+            </div>
+            <p class="text-sm font-medium text-gray-900">$28.00</p>
+          </div>
+        </div>
+
+        <!-- Product 4 -->
+        <div class="group relative">
+          <div
+            class="aspect-w-1 aspect-h-1 w-full overflow-hidden rounded-lg bg-gray-100 xl:aspect-w-7 xl:aspect-h-8"
+          >
+            <img
+              src="images/white_cap_back_1764799213683.png"
+              alt="Gorra Blanca Trasera"
+              class="h-full w-full object-cover object-center group-hover:opacity-75 transition-opacity duration-300"
+            />
+          </div>
+          <div class="mt-4 flex justify-between">
+            <div>
+              <h3 class="text-sm text-gray-700">
+                <a href="#">
+                  <span aria-hidden="true" class="absolute inset-0"></span>
+                  White Back
+                </a>
+              </h3>
+              <p class="mt-1 text-sm text-gray-500">
+                Detalle trasero ajustable
+              </p>
+            </div>
+            <p class="text-sm font-medium text-gray-900">$25.00</p>
+          </div>
+        </div>
+
+        <!-- Product 5 -->
+        <div class="group relative">
+          <div
+            class="aspect-w-1 aspect-h-1 w-full overflow-hidden rounded-lg bg-gray-100 xl:aspect-w-7 xl:aspect-h-8"
+          >
+            <img
+              src="images/black_cap_detail_1764799227734.png"
+              alt="Gorra Negra Detalle"
+              class="h-full w-full object-cover object-center group-hover:opacity-75 transition-opacity duration-300"
+            />
+          </div>
+          <div class="mt-4 flex justify-between">
+            <div>
+              <h3 class="text-sm text-gray-700">
+                <a href="#">
+                  <span aria-hidden="true" class="absolute inset-0"></span>
+                  Premium Detail
+                </a>
+              </h3>
+              <p class="mt-1 text-sm text-gray-500">Textura de alta calidad</p>
+            </div>
+            <p class="text-sm font-medium text-gray-900">$30.00</p>
+          </div>
+        </div>
+
+        <!-- Product 6 -->
+        <div class="group relative">
+          <div
+            class="aspect-w-1 aspect-h-1 w-full overflow-hidden rounded-lg bg-gray-100 xl:aspect-w-7 xl:aspect-h-8"
+          >
+            <img
+              src="images/white_cap_lifestyle_1764799241987.png"
+              alt="Gorra Blanca Lifestyle"
+              class="h-full w-full object-cover object-center group-hover:opacity-75 transition-opacity duration-300"
+            />
+          </div>
+          <div class="mt-4 flex justify-between">
+            <div>
+              <h3 class="text-sm text-gray-700">
+                <a href="#">
+                  <span aria-hidden="true" class="absolute inset-0"></span>
+                  Lifestyle Edition
+                </a>
+              </h3>
+              <p class="mt-1 text-sm text-gray-500">Para el día a día</p>
+            </div>
+            <p class="text-sm font-medium text-gray-900">$28.00</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-16 text-center">
+        <a
+          href="gorras.html"
+          class="inline-block bg-black text-white px-8 py-3 rounded-full font-bold hover:bg-gray-800 transition-colors duration-300"
+        >
+          VER TODAS LAS GORRAS
+        </a>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-50 border-t border-gray-200">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div
+          class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left"
+        >
+          <div class="flex flex-col items-center md:items-start">
+            <h4 class="font-bold text-lg mb-2">Contacto</h4>
+            <p class="text-gray-600 flex items-center">
+              <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.463 1.065 2.876 1.213 3.074.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"
+                />
+              </svg>
+              +123 456 7890
+            </p>
+          </div>
+          <div
+            class="flex flex-col items-center md:items-center justify-center"
+          >
+            <p class="text-gray-500">
+              &copy; 2025 CAPS 2M. Todos los derechos reservados.
+            </p>
+          </div>
+          <div class="flex flex-col items-center md:items-end justify-center">
+            <p class="font-bold text-xl">2025</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Floating Scroll to Top Button -->
+    <button
+      id="scrollToTopBtn"
+      class="fixed bottom-8 right-8 bg-black text-white p-3 rounded-full shadow-lg hover:bg-gray-800 transition-all duration-300 opacity-0 invisible translate-y-10 z-50"
+    >
+      <svg
+        class="w-6 h-6"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M5 10l7-7m0 0l7 7m-7-7v18"
+        />
+      </svg>
+    </button>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
